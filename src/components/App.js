@@ -18,7 +18,7 @@ const App = ()=>{
            )}>Add Todo</button>
 
            <div id="incr-cnt">
-            Count : {count} <button id="todo-0" onClick={()=>(setCount(count+1))}>0</button>
+            <span id="calc">Count : {count} </span><button id="todo-0" onClick={()=>(setCount(count+1))}>New Todo</button>
            </div>
 
 
@@ -28,7 +28,7 @@ const App = ()=>{
             setTodo([...todo,input])
            )}>
             Add Skill</button>
-            <ul>
+            <ul id="item-jumbotron">
             {todo && (todo.map((task)=>(
                 <li>{task}</li>
             )))

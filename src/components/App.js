@@ -12,13 +12,13 @@ const App = ()=>{
     return(
         <div id="main">
            <h1>My todos</h1>
-           <p>{newTodo}</p>
+           <p id="todo-0">{newTodo}</p>
            <button id="add-todo-btn" onClick={()=>(
             setNewTodo('New Todo')
            )}>Add Todo</button>
 
            <div id="incr-cnt">
-            Count : {count}<button id="todo-0" onClick={()=>(setCount(count+1))}>New Todo</button>
+            Count : {count}<button id="incr-btn" onClick={()=>(setCount(count+1))}>New Todo</button>
             <div id="calc">1000000000</div>
            </div>
            

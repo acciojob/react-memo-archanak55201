@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const App = ()=>{
     const [newTodo,setNewTodo] = useState('');
-    const [count,setCount] = useState(0);
+    const [count,setCount] = useState(1000000000);
     const [input,setInput] = useState('');
     const [todo,setTodo] = useState([]);
 
@@ -18,8 +18,8 @@ const App = ()=>{
            )}>Add Todo</button>
 
            <div id="incr-cnt">
-            Count : {count}<button id="incr-btn" onClick={()=>(setCount(count+1))}>New Todo</button>
-            <div id="calc">1000000000</div>
+            Count : 0<button id="incr-btn" onClick={()=>(setCount(count+1))}>New Todo</button>
+            <div id="calc">{count}</div>
            </div>
            
 

@@ -7,6 +7,7 @@ const App = ()=>{
     const [count,setCount] = useState(0);
     const [input,setInput] = useState('');
     const [todo,setTodo] = useState([]);
+
     console.log(todo);
     return(
         <div id="main">
@@ -16,13 +17,14 @@ const App = ()=>{
             setNewTodo('New Todo')
            )}>Add Todo</button>
 
-           <div>
-            Count : {count} <button id="incr-cnt" onClick={()=>(setCount(count+1))}>+</button>
+           <div id="incr-cnt">
+            Count : {count} <button id="todo-0" onClick={()=>(setCount(count+1))}>0</button>
            </div>
 
+
            <h1>React.memo</h1>
-           <input type="text" placeholder="todo task "  onChange={(e)=>(setInput(e.target.value))}/>
-           <button id="skill-input" onClick={()=>(
+           <input id="skill-input" type="text" placeholder="todo task "  onChange={(e)=>(setInput(e.target.value))}/>
+           <button id="skill-btn" onClick={()=>(
             setTodo([...todo,input])
            )}>
             Add Skill</button>
@@ -35,4 +37,6 @@ const App = ()=>{
         </div>
     )
 }
+
+
 export default App;

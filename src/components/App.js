@@ -19,8 +19,9 @@ const App = ()=>{
 
            <div id="incr-cnt">
             Count : {count}<button id="todo-0" onClick={()=>(setCount(count+1))}>New Todo</button>
-           </div>
             <div id="calc">1000000000</div>
+           </div>
+           
 
            <h1>React.memo</h1>
            <input id="skill-input" type="text" placeholder="todo task "  onChange={(e)=>(setInput(e.target.value))}/>
